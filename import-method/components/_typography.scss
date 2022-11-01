@@ -1,0 +1,8 @@
+// TYPOGRAPHY
+//===========
+// A MIXIN again and another VAR
+.intro {
+  @include embiggen-type(2rem);
+  color: $color-brand-primary;
+  font-weight: bold;
+}

@@ -1,0 +1,24 @@
+// LET'S LAYOUT A PAGE
+//====================
+// Use a MIXIN and a VAR
+body {
+  @include embiggen-type(16px);
+  background-color: $color-background;
+  font-family: sans-serif;
+  //font-size: $font-base-size;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+// Another MIXIN
+section {
+  @include page-layout();
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}

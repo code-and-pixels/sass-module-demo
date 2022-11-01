@@ -1,0 +1,20 @@
+// TITLE
+//======
+
+// Yet another MIXIN
+h1 {
+  @include ensmallen-type(6rem);
+  line-height: 1.2;
+  background: rgb(255, 140, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 143, 1) 0%,
+    rgba(168, 24, 141, 1) 30%,
+    rgba(55, 11, 105, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+}

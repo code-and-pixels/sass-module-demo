@@ -1,0 +1,31 @@
+// Make text bigger
+//=================
+@mixin embiggen-type($font-size) {
+  font-size: calc($font-size * 1.5);
+
+  @media (min-width: 800px) {
+    font-size: $font-size;
+  }
+}
+
+// Make text smaller
+//==================
+@mixin ensmallen-type($font-size) {
+  font-size: calc($font-size / 1.5);
+
+  @media (min-width: 800px) {
+    font-size: $font-size;
+  }
+}
+
+// Generic page layout
+//====================
+@mixin page-layout() {
+  width: 800px;
+  max-width: calc(100% - 40px);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  //font-size: $font-base-size;
+}

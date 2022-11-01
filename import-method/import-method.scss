@@ -1,0 +1,56 @@
+// BITS AMD BOBS OF SASS
+//======================
+// This should look familiar; we're importing our sass partials
+@import "lib/variables";
+@import "utils/variables";
+@import "utils/mixins";
+
+// LET'S STYLE SOME STUFF
+//=======================
+// Use a MIXIN and a VAR
+body {
+  @include embiggen-type(16px);
+  background-color: $color-background;
+  font-family: sans-serif;
+  //font-size: $font-base-size;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+// Another MIXIN
+section {
+  @include page-layout();
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+// Yet another MIXIN
+h1 {
+  @include ensmallen-type(6rem);
+  line-height: 1.2;
+  background: rgb(255, 140, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 143, 1) 0%,
+    rgba(168, 24, 141, 1) 30%,
+    rgba(55, 11, 105, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+// A MIXIN again and another VAR
+.intro {
+  @include embiggen-type(2rem);
+  color: $color-brand-primary;
+  font-weight: bold;
+}

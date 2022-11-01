@@ -1,0 +1,42 @@
+// DEFAULT
+//========
+// Just to test that gulp is running and start somewhere
+@use "color-palette";
+
+// A couple of variables
+$color-background: #414141;
+$color-primary: salmon;
+
+// Some other styles
+body {
+  background-color: $color-background;
+  color: color-palette.setcolor(primary);
+  font: 100%/1.5 sans-serif;
+  margin: 0;
+  padding: 0 6em;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  line-height: 1.2;
+  background: rgb(255, 140, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 143, 1) 0%,
+    rgba(168, 24, 141, 1) 51%,
+    rgba(55, 11, 105, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

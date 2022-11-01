@@ -1,0 +1,19 @@
+@use "sass:color";
+
+$brand-primary: red;
+$brand-secondary: blue;
+$brand-base: #414141;
+$brand-highlight: coral;
+
+$base-colors: (
+  primary: (
+    base: $brand-primary,
+    light: color.adjust($brand-primary, $lightness: 20%),
+    dark: color.adjust($brand-primary, $lightness: -20%),
+  ),
+  secondary: (
+    base: $brand-secondary,
+    light: color.adjust($brand-secondary, $lightness: 20%),
+    dark: color.adjust($brand-secondary, $lightness: -20%),
+  ),
+);

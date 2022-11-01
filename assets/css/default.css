@@ -1,0 +1,27 @@
+body {
+  background-color: #414141;
+  color: #78a22f;
+  font: 100%/1.5 sans-serif;
+  margin: 0;
+  padding: 0 6em;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  line-height: 1.2;
+  background: rgb(255, 140, 143);
+  background: linear-gradient(90deg, rgb(255, 140, 143) 0%, rgb(168, 24, 141) 51%, rgb(55, 11, 105) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

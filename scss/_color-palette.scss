@@ -1,0 +1,15 @@
+@use "base-colors";
+@use "tenant-colors";
+
+$color-palette: map-merge(
+  base-colors.$base-colors,
+  tenant-colors.$tenant-colors
+);
+
+@function setcolor($color-group, $tone: base) {
+  @if map-has-key($color-palette, $color-group) {
+    @return map-get(map-get($color-palette, $color-group), $tone);
+  } @else {
+    @warn "omg you suck.";
+  }
+}

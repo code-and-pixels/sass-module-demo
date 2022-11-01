@@ -1,0 +1,64 @@
+// BITS AMD BOBS OF SASS
+//======================
+// Sass Modules = no more @import
+// So let's change these to @use
+@use "lib/variables" as libVars;
+@use "utils/variables";
+@use "utils/mixins";
+@use "lib/test-1" as test1Vars;
+@use "lib/test-2" as test2Vars;
+
+//@use "utils";
+
+// Some other styles
+body {
+  @include mixins.embiggen-type(16px);
+  background-color: variables.$color-background;
+  color: variables.$color-font-base;
+  font-family: sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  @include mixins.page-layout();
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  @include mixins.ensmallen-type(6rem);
+  line-height: 1.2;
+  background: rgb(255, 140, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(55, 11, 105, 1) 0%,
+    rgba(168, 24, 141, 1) 10%,
+    rgba(255, 140, 143, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.intro {
+  @include mixins.embiggen-type(2rem);
+  color: variables.$color-brand-primary;
+  font-weight: bold;
+
+  .test-1 & {
+    color: test1Vars.$color-brand-primary;
+  }
+
+  .test-2 & {
+    color: test2Vars.$color-brand-primary;
+  }
+}
