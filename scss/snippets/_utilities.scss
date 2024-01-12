@@ -1,0 +1,44 @@
+// Utilities
+// =========
+.responsive {
+    max-width: 100%;
+    width: 100%;
+}
+
+.allcaps {
+    text-transform: uppercase;
+}
+
+.section-title {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.content-block {
+    margin-top: 4px;
+    margin-tobbom: 4px;
+}
+
+a.block-link {
+    display: block;
+    color: unset;
+    text-decoration: none;
+
+    &:hover {
+        outline: 1px dotted #333;        
+    
+        p {
+            text-decoration: underline;
+            
+            &.badge {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:focus {
+        outline: 1px dotted #333;
+    }
+}

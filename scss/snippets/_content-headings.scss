@@ -1,0 +1,45 @@
+// underline is Morris-specific
+.underline {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5eem;
+}
+
+.custom-page-container, .example {
+    h1 {
+        font-size: 3em !important;
+    }
+    
+    h2 {
+        font-size: 2.75em !important;
+    }
+    
+    h3 {
+        font-size: 2.5em !important;
+    }
+    
+    h4 {
+        font-size: 2.25em !important;
+    }
+    
+    h5 {
+        font-size: 2em !important;
+    }
+    
+    h6 {
+        font-size: 1.5em !important;
+    }
+}
+
+.banner-title-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    background-color: #ccc;
+    background-position: center center;
+    min-height: 35vh;
+}

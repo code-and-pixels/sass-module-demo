@@ -1,0 +1,112 @@
+// Layout
+// ======
+
+// Full width section
+// may not need this as it should be default
+.fullwidth {}
+
+// Maximum width section
+// should match the width of the header and be centered
+.maxwidth {
+  width: 100%;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Halfsies
+// 50/50 block, stacks vertically on smaller screens
+
+.halfsies {
+    @media (min-width: 768px) {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 16px;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        .half-1, .half-2 {
+            flex-basis: 50%;
+        }
+    }
+}
+
+
+/* 33/66 block */
+.third {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    
+    @media (min-width: 991px) {
+        flex-flow: row nowrap;
+        gap: 16px;
+        
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .third-1 {
+            flex-basis: 33.333%;
+        }
+        
+        .third-2 {
+            flex-basis: 66.666%;
+        }
+    }
+}
+
+/* Rows of blocks */
+.row-of-4-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.row-of-5-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.row-of-6-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.row-of-7-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+.row-of-8-blocks {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: 991px) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
